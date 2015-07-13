@@ -30,7 +30,8 @@ require('./config/passport')();
 app.listen(config.port);
 
 // Expose app
-exports = module.exports = app;
+//exports =
+	module.exports = app;
 
 // Logging initialization
 console.log('MEAN.JS application started on port ' + config.port);
