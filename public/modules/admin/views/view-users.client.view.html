@@ -1,13 +1,17 @@
 <section data-ng-controller="AdminController" data-ng-init="find()">
     <h1>Users</h1>
-    <ul>
-        <li data-ng-repeat="user in users">
-            <a data-ng-href="#!/reqs/{{user._id}}" data-ng-bind="user.username"></a>
+    <ul class="list-group">
+        <li data-ng-repeat="user in users" class="list-group-item">
+            <div>
+
+                <button type="button" class="btn btn-success" style="display: inline-block;float: right;margin: 5px"><i class="glyphicon glyphicon-ok" ></i></button>
+                <button type="button" class="btn btn-danger" style="display: inline-block;float: right;margin:5px" ng-click="delete(user)"><i class="glyphicon glyphicon-remove" ></i></button>
+                <a data-ng-href="#!/reqs/{{user._id}}" data-ng-bind="'{{user.firstName}}'+',{{user.lastName}}'"></a>
             <br>
             <small data-ng-bind="user.created | date:'medium'"></small>
-            <small>/</small>
-            <small data-ng-bind="user.lastName"></small>
-            <p data-ng-bind="user.lastName"></p>
+            <br>
+            <small data-ng-bind="user.username"></small>
+           </div>
         </li>
     </ul>
     <div data-ng-hide="!users || users.length">
