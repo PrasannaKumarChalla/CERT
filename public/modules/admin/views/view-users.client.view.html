@@ -6,11 +6,11 @@
 
                 <button type="button" class="btn btn-success" style="display: inline-block;float: right;margin: 5px"><i class="glyphicon glyphicon-ok" ></i></button>
                 <button type="button" class="btn btn-danger" style="display: inline-block;float: right;margin:5px" ng-click="delete(user)"><i class="glyphicon glyphicon-remove" ></i></button>
-                <a data-ng-href="#!/reqs/{{user._id}}" data-ng-bind="'{{user.firstName}}'+',{{user.lastName}}'"></a>
+               <strong><h4> <a data-ng-href="#!/reqs/{{user._id}}" data-ng-bind="'{{user.firstName}}'+',{{user.lastName}}'"></a></h4></strong>
             <br>
-            <small data-ng-bind="user.created | date:'medium'"></small>
+            <p data-ng-bind="user.created | date:'medium'"></p>
             <br>
-            <small data-ng-bind="user.username"></small>
+            <p data-ng-bind="user.username"></p>
            </div>
         </li>
     </ul>
