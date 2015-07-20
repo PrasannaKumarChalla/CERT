@@ -26,7 +26,7 @@ angular.module('admin').config(['$stateProvider',
             state('listUsers', {
                 url: '/reqs',
                 templateUrl: 'modules/admin/views/view-users.client.view.html'
-            })
+            });
             //state('createArticle', {
             //    url: '/articles/create',
             //    templateUrl: 'modules/articles/views/create-article.client.view.html'

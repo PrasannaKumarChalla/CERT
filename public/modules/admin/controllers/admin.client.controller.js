@@ -10,7 +10,7 @@ angular.module('admin').controller('AdminController', ['$scope', '$stateParams',
         };
         $scope.findOne = function() {
             $scope.user = admins.get({
-                useId: $routeParams.useId
+                useId: $stateParams.useId
             });
         };
 
