@@ -7,7 +7,7 @@ angular.module('users').config(['$stateProvider',
 		$stateProvider.
 		state('admin', {
 			url: '/admin',
-			templateUrl: 'modules/users/views/admin.client.view.html'
+			templateUrl: 'modules/admin/views/view-users.client.view.html'
 		}).
 		state('profile', {
 			url: '/settings/profile',

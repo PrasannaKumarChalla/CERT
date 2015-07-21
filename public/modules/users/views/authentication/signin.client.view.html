@@ -1,27 +1,72 @@
-<section class="row" data-ng-controller="AuthenticationController" style="margin-top: 10%">
-	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
-		<h1>Sign in</h1>
-		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
-			<fieldset>
-				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+<section class="row" data-ng-controller="AuthenticationController" style="margin-top: 6%">
+	<!--<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">-->
+		<!--<h1>Sign in</h1>-->
+		<!--<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">-->
+			<!--<fieldset>-->
+				<!--<div class="form-group">-->
+					<!--<label for="username">Username</label>-->
+					<!--<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">-->
+				<!--</div>-->
+				<!--<div class="form-group">-->
+					<!--<label for="password">Password</label>-->
+					<!--<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">-->
+				<!--</div>-->
+				<!--<div class="text-center form-group">-->
+					<!--<button type="submit" class="btn btn-primary">Sign in</button>&nbsp; or&nbsp;-->
+					<!--<a href="/#!/signup">Sign up</a>-->
+				<!--</div>-->
+				<!--<div class="forgot-password">-->
+					<!--<a href="/#!/password/forgot">Forgot your password?</a>-->
+				<!--</div>-->
+				<!--<div data-ng-show="error" class="text-center text-danger">-->
+					<!--<strong data-ng-bind="error"></strong>-->
+				<!--</div>-->
+			<!--</fieldset>-->
+		<!--</form>-->
+	<!--</div>-->
+	<div class='row'>
+		<div class='container' style='display:flex;'>
+			<div class="jumbotron text-center col-md-6" >
+				<h1 class="text-success">C.E.R.T</h1>
+				<p class="text-success">Community Emergency Response Team.</p>
+				<img src="modules/core/img/CERT.jpg" width="500" height="300" alt="CERT"/>
+			</div>
+			<div class="jumbotron text-center col-md-6" >
+				<div  style='margin-top:10%;'>
+					<p>  <h3 class='text-primary'>Login</h3>
+					<p></p>
 				</div>
-				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
-				</div>
-				<div class="text-center form-group">
-					<button type="submit" class="btn btn-primary">Sign in</button>&nbsp; or&nbsp;
-					<a href="/#!/signup">Sign up</a>
-				</div>
-				<div class="forgot-password">
-					<a href="/#!/password/forgot">Forgot your password?</a>
-				</div>
-				<div data-ng-show="error" class="text-center text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-			</fieldset>
-		</form>
+				<form class="form-horizontal" role="form" data-ng-submit="signin()">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-6 control-label">Username</label>
+						<div class="col-sm-6">
+							<input  type='text' class="form-control" id="inputEmail3" placeholder="Username" data-ng-model="credentials.username">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-6 control-label">Password</label>
+						<div class="col-sm-6">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="Password" data-ng-model="credentials.password">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class='container'>
+								<button type="submit" class="btn btn-success">Sign In</button>
+								<div data-ng-show="error" class="text-center text-danger">
+								<strong data-ng-bind="error"></strong>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<a href="registration.html"><h5 class="text-primary">Not a user yet?</h5></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
 	</div>
 </section>
